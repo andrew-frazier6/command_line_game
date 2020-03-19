@@ -14,3 +14,7 @@ for x in questions:
         print("correct!")
         correct_answers += 1
         total_questions -= 1
+    elif user != x['back-of-card']:
+        print("my goodness you need help")
+        incorrect_answers += 1
+        total_questions -= 1

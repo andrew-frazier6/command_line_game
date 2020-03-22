@@ -9,8 +9,8 @@ questions = [
         "question": "Who had 59 wins for the Oakland A's from 1972-1974?",
         "answer": "Ken Holtzman/Vida Blue/Catfish Hunter/Blue Moon Odom"
     }, {
-        "question": "",
-        "answer": ""
+        "question": "Who managed the A's in their first year in Oakland?",
+        "answer": "Bob Kennedy/Alvin Dark/CaseyStenge/Dick Williams""
     }, {
         "question": "",
         "answer": ""

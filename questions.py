@@ -6,8 +6,8 @@ questions = [
         "question": "Tim Hudson was a member of Oakland's "Big Three" pitchers along with what other players?",
         "answer": "Mark Mulder And Barry Zito/Mark Mulder And Barry Zito/Barry Mulder And Mark Zito/Barry Zito And Huston Street"
     }, {
-        "question": "",
-        "answer": ""
+        "question": "Who had 59 wins for the Oakland A's from 1972-1974?",
+        "answer": "Ken Holtzman/Vida Blue/Catfish Hunter/Blue Moon Odom"
     }, {
         "question": "",
         "answer": ""

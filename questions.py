@@ -21,8 +21,8 @@ questions = [
         "question": "The Athletics' Major League debut was on April 26th, 1901, against which team?",
         "answer": "Washington Senators/ in front of 10,524 fans "
     }, {
-        "question": "",
-        "answer": ""
+        "question": "In what year did the Atheltics win their first World Series?",
+        "answer": "1910, Against the Chicago Cubs"
     }, {
         "question": "",
         "answer": ""

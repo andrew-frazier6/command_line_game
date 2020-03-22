@@ -24,6 +24,6 @@ questions = [
         "question": "In what year did the Atheltics win their first World Series?",
         "answer": "1910, Against the Chicago Cubs"
     }, {
-        "question": "",
-        "answer": ""
+        "question": "The Kansas City Athletics' first regular season game resulted in a victory over which team?",
+        "answer": "Detroit Tigers"
     }]

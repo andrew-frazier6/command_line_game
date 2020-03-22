@@ -15,8 +15,8 @@ questions = [
         "question": "Which National League team did the Athletics defeat three different times for the World Series championship?",
         "answer": "Giants/ The Athletics defeated the Giants in 1911, 1913 and 1989."
     }, {
-        "question": "",
-        "answer": ""
+        "question": "Which year did the franchise move from Philadelphia to Kansas City?",
+        "answer": "1955"
     }, {
         "question": "",
         "answer": ""

@@ -12,8 +12,8 @@ questions = [
         "question": "Who managed the A's in their first year in Oakland?",
         "answer": "Bob Kennedy/Alvin Dark/CaseyStenge/Dick Williams""
     }, {
-        "question": "",
-        "answer": ""
+        "question": "Which National League team did the Athletics defeat three different times for the World Series championship?",
+        "answer": "Giants/ The Athletics defeated the Giants in 1911, 1913 and 1989."
     }, {
         "question": "",
         "answer": ""

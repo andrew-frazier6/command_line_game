@@ -18,8 +18,8 @@ questions = [
         "question": "Which year did the franchise move from Philadelphia to Kansas City?",
         "answer": "1955"
     }, {
-        "question": "",
-        "answer": ""
+        "question": "The Athletics' Major League debut was on April 26th, 1901, against which team?",
+        "answer": "Washington Senators/ in front of 10,524 fans "
     }, {
         "question": "",
         "answer": ""

@@ -26,4 +26,7 @@ questions = [
     }, {
         "question": "The Kansas City Athletics' first regular season game resulted in a victory over which team?",
         "answer": "Detroit Tigers"
+    }, {
+        "question": "The Athletics franchise began in 1901. When was their first World Series appearance?",
+        "answer": "1905"
     }]

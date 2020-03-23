@@ -1,4 +1,5 @@
 from peewee import *
+# from trivia import Question
 import random
 
 db = PostgresqlDatabase('trivia', user='postgres',
@@ -13,62 +14,70 @@ class BaseModel(Model):
 
 
 class Question(BaseModel):
-    question = CharField()
-    answer = CharField()
+    front = CharField()
+    back = CharField()
 
-
-card_data = [
-    {
-        "question": "In 2005, Nick Swisher finished behind which teammate in the Rookie of the Year voting?",
-        "answer": "Huston Street"
-    }, {
-        "question": "Tim Hudson and Barry Zito were members of Oakland's ""Big Three"" pitchers along with what other player?",
-        "answer": "Mark Mulder"
-    }, {
-        "question": "Who had 59 wins for the Oakland A's from 1972-1974?",
-        "answer": "Ken Holtzman"
-    }, {
-        "question": "Who managed the A's in their first year in Oakland?",
-        "answer": "Bob Kennedy"
-    }, {
-        "question": "Which National League team did the Athletics defeat three different times for the World Series championship?",
-        "answer": "Giants"
-    }, {
-        "question": "Which year did the franchise move from Philadelphia to Kansas City?",
-        "answer": "1955"
-    }, {
-        "question": "The Athletics' Major League debut was on April 26th, 1901, against which team?",
-        "answer": "Washington Senators"
-    }, {
-        "question": "In what year did the Atheltics win their first World Series?",
-        "answer": "1910"
-    }, {
-        "question": "The Kansas City Athletics' first regular season game resulted in a victory over which team?",
-        "answer": "Detroit Tigers"
-    }, {
-        "question": "The Athletics franchise began in 1901. When was their first World Series appearance?",
-        "answer": "1905"
-    }]
 
 db.drop_tables([Question])
 db.create_tables([Question])
 
+
+card_data = [
+    {
+        "front": "In 2005, Nick Swisher finished behind which teammate in the Rookie of the Year voting?",
+        "back": "Huston Street"
+    }, {
+        "front": "Tim Hudson and Barry Zito were members of Oakland's ""Big Three"" pitchers along with what other player?",
+        "back": "Mark Mulder"
+    }, {
+        "front": "Who had 59 wins for the Oakland A's from 1972-1974?",
+        "back": "Ken Holtzman"
+    }, {
+        "front": "Who managed the A's in their first year in Oakland?",
+        "back": "Bob Kennedy"
+    }, {
+        "front": "Which National League team did the Athletics defeat three different times for the World Series championship?",
+        "back": "Giants"
+    }, {
+        "front": "Which year did the franchise move from Philadelphia to Kansas City?",
+        "back": "1955"
+    }, {
+        "front": "The Athletics' Major League debut was on April 26th, 1901, against which team?",
+        "back": "Washington Senators"
+    }, {
+        "front": "In what year did the Atheltics win their first World Series?",
+        "back": "1910"
+    }, {
+        "front": "The Kansas City Athletics' first regular season game resulted in a victory over which team?",
+        "back": "Detroit Tigers"
+    }, {
+        "front": "The Athletics franchise began in 1901. When was their first World Series appearance?",
+        "back": "1905"
+    }]
+
 for cards in card_data:
-    cards = Question(question=cards["question"], answer=cards["answer"])
+    cards = Question(front=cards["front"], back=cards["back"])
     cards.save()
+
+flash_cards = Question.select()
+
+total_answers = 10
+correct_answers = 0
+
+welcome_message = "Who doesn't love extremely specific Oakland Athletics questions that aren't multiple choice? Lets get started!"
+print(welcome_message)
 
 
 def flash_game():
-    total_answers = 10
-    correct_answers = 0
-    incorrect_answers = 0
-    for x in card_data:
-        user_answer = input(f" {x['question']}? ")
-        if user_answer == x['answer']:
+    global correct_answers
+    global total_answers
+    user_answer = input("")
+    for question in flash_cards:
+        print(f"{question.front}")
+        if user_answer == question.back:
             correct_answers += 1
-            total_answers += 1
+            total_answers -= 1
         else:
-            incorrect_answers += 1
             total_answers += 1
         if total_answers == 10:
             print(correct_answers)
@@ -77,6 +86,4 @@ def flash_game():
             flash_game()
 
 
-welcome_message = "Who doesn't love extremely specific Oakland Athletics questions that aren't multiple choice? Lets get started!"
-print(welcome_message)
 flash_game()

@@ -1,7 +1,7 @@
 from peewee import *
 import random
 
-db = PostgresqlDatabase('Trivia', user='postgres',
+db = PostgresqlDatabase('trivia', user='postgres',
                         password='', host='localhost', port=5432)
 
 db.connect()

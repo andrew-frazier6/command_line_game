@@ -17,10 +17,6 @@ class Question(BaseModel):
     answer = CharField()
 
 
-db.drop_tables([Question])
-db.create_tables([Question])
-
-
 card_data = [
     {
         "question": "In 2005, Nick Swisher finished behind which teammate in the Rookie of the Year voting?",
@@ -53,6 +49,13 @@ card_data = [
         "question": "The Athletics franchise began in 1901. When was their first World Series appearance?",
         "answer": "1905"
     }]
+
+db.drop_tables([Question])
+db.create_tables([Question])
+
+for cards in card_data:
+    cards = Question(question=cards["question"], answer=cards["answer"])
+    cards.save()
 
 
 def flash_game():

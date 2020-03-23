@@ -1,6 +1,6 @@
 ## COMMAND LINE FLASH CARDS
 
-- Worth the try https://andrew-frazier6.github.io/Responsive-Mockup/
+- 
 
 ## PREREQUISITES
 

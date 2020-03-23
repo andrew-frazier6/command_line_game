@@ -82,7 +82,11 @@ def flash_game():
             print(correct_answers)
             user_answer = input("Try again?")
         if user_answer == "yes":
+            total_answers = 10
             flash_game()
 
 
 flash_game()
+
+
+# change question to be q and mix up variables

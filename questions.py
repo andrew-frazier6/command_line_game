@@ -77,8 +77,8 @@ def flash_game():
             correct_answers += 1
             total_answers -= 1
         else:
-            total_answers += 1
-        if total_answers == 10:
+            total_answers -= 1
+        if total_answers < 1:
             print(correct_answers)
             user_answer = input("Try again?")
         if user_answer == "yes":

@@ -1,6 +1,5 @@
 from peewee import *
-# from trivia import Question
-import random
+
 
 db = PostgresqlDatabase('trivia', user='postgres',
                         password='', host='localhost', port=5432)
@@ -59,21 +58,21 @@ for cards in card_data:
     cards = Question(front=cards["front"], back=cards["back"])
     cards.save()
 
-flash_cards = Question.select()
 
 total_answers = 10
 correct_answers = 0
 
 welcome_message = "Who doesn't love extremely specific Oakland Athletics questions that aren't multiple choice? Lets get started!"
-print(welcome_message)
 
 
 def flash_game():
+    flash_cards = Question.select()
     global correct_answers
     global total_answers
-    user_answer = input("")
+    print(welcome_message)
     for question in flash_cards:
         print(f"{question.front}")
+        user_answer = input("")
         if user_answer == question.back:
             correct_answers += 1
             total_answers -= 1

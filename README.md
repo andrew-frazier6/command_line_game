@@ -1,6 +1,6 @@
 ## COMMAND LINE FLASH CARDS
 
-- https://andrew-frazier6.github.io/command_line_game/
+- This was ACTUALLY really fun to make. No sarcasm just simplicity 
 
 ## PREREQUISITES
 
